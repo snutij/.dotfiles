@@ -1,0 +1,9 @@
+alias ls='ls -G'
+alias lsl='ls -l'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
