@@ -7,3 +7,10 @@ alias l='ls -CF'
 
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# require ffmpeg and gifsicle
+# brew install ffmpeg gifsicle
+# see https://gist.github.com/dergachev/4627207
+movtogif() {
+    ffmpeg -i $1 -r 10 -f gif - | gifsicle --optimize=3 > out.gif
+}
